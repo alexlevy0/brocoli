@@ -251,7 +251,7 @@ body.vr #showDinosaurAR {
 
 header {
   display: block;
-  min-height: 50%;
+  min-height: 10%;
   padding: 0 1em 0 1em;
 }
 
@@ -391,7 +391,10 @@ footer {
   border-top: 1px solid grey;
   padding: 1em;
   margin: 0;
-  height: 10em;
+  height: 3em;
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
 }
 
 canvas {

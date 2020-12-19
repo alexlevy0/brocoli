@@ -279,7 +279,7 @@ export function PreloadDinosaurApp(debug = false) {
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.outputEncoding = THREE.sRGBEncoding;
-  //renderer.physicallyCorrectLights = true;
+  // renderer.physicallyCorrectLights = true;
   renderer.xr.enabled = true;
 
   // This is useful when debugging, but can cause massive blocking operations
@@ -355,10 +355,10 @@ export function PreloadDinosaurApp(debug = false) {
           ambientSounds.setBuffer(buffer);
           ambientSounds.setLoop(true);
           ambientSounds.setVolume(0.5);
-          ambientSounds.play();
+          // ambientSounds.play();
         });
       } else {
-        ambientSounds.play();
+        // ambientSounds.play();
       }
     }
 

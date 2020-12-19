@@ -39,7 +39,8 @@ export class XRDinosaur extends THREE.Object3D {
 
     // Classes that extend XRDinosaur should override these values
     this.path = '';
-    this.file = 'compressed.glb';
+    this.file = 'compressed2.glb';
+    // this.file = 'compressed.glb';
     this.shadowNodeNames = [];
     this.shadowSize = 3;
     this.animationSequence = DEFAULT_ANIMATION_SEQUENCE;
@@ -65,19 +66,19 @@ export class XRDinosaur extends THREE.Object3D {
     let animationIndex = 0;
     let animationSequence = this.animationSequence;
     this._currentAction = this._actions[animationSequence[0]];
-    this._currentAction.play();
+    // this._currentAction.play();
 
     let nextAnimation = (e) => {
       if (e.action == this._actions.Die) {
         this._mixer.stopAllAction();
         this._scared = false;
         this._currentAction = this._actions.Get_Up;
-        this._currentAction.play();
+        // this._currentAction.play();
       } else if (!this._scared) {
         this._mixer.stopAllAction();
         animationIndex = ++animationIndex % animationSequence.length;
         this._currentAction = this._actions[animationSequence[animationIndex]];
-        this._currentAction.play();
+        // this._currentAction.play();
       }
     }
     this._mixer.addEventListener('loop', nextAnimation);
@@ -100,7 +101,7 @@ export class XRDinosaur extends THREE.Object3D {
 
     this._currentAction.crossFadeTo(this._actions.Die, 0.25);
     this._currentAction = this._actions.Die;
-    this._actions.Die.play();
+    // this._actions.Die.play();
   }
 
   get shadowNodes() {
